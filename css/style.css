@@ -1,0 +1,445 @@
+html{
+    min-height:100%;
+}
+
+body{
+    min-height:100%;
+    font-size:12px;
+}
+
+.tableWrapper{
+    height:100%;
+    position:relative;
+    width:100%;
+    white-space: nowrap;
+}
+
+.tableHeader{
+    width:150px;
+    text-shadow: 1px 1px 0 #fff;
+}
+
+.tableMatchedResult{
+    border: 1px solid #0084B4 !important;
+}
+
+.tableBody{
+    width: 93%;
+    position: relative;
+    overflow:hidden;
+}
+
+.tableBody, .tableHeader{
+    font-size:0;
+    display:inline-block;
+}
+
+
+.tableColumn{
+    display:inline-block;
+
+}
+
+.tableBody .tableColumn:hover .tableData,div.tableBody span.tableData.hovered{
+    background:#eee !important;
+}
+
+.tableBody .tableColumn{
+    font-size:12px;
+    width:10%;
+    text-align:center;
+    min-width: 15em;
+}
+
+.tableHeader .tableColumn{
+    font-size:12px;
+    text-align: center;
+    width:100%;
+    padding:0;
+}
+
+.tableHeader .tableData span{
+    float:left;
+}
+
+ .tableColumn .tableData{
+    display: block;
+    /* min-height: 50px; */
+    padding: 0.5em;
+    height: 3em;
+    vertical-align: middle;
+    /* padding: 1em 0; */
+    line-height: 3em;
+    cursor:pointer;
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+    background: #fafafa;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#fafafa));
+    background: -moz-linear-gradient(top, #fbfbfb, #fafafa);
+}
+
+/*.tableBody .tableColumn:first-of-type .tableData{*/
+    /*border-left:none;*/
+/*}*/
+
+
+.tableHeader .tableData{
+    overflow: auto;
+    border-right: 1px solid #bbb;
+}
+
+.tableOptions, .tableFooter{
+    border-bottom: 1px solid #ccc;
+    overflow: auto;
+    text-align: center;
+}
+
+.tableHeader .tableData, .tableOptions, .tableFooter{
+    background: #ededed;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#ebebeb));
+    background: -moz-linear-gradient(top, #ededed, #ebebeb);
+}
+
+.tableOptions input{
+    padding: 10px;
+    border: none;
+    border-right: 1px solid #ccc;
+    width: 129px;
+    float:left;
+}
+
+.tableOptions .tableName{
+    display: inline-block;
+    margin: 10px 0;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #bbb;
+}
+
+.tableOptions .tableActions{
+    float:right;
+}
+
+.tableOptions .tableActions a {
+    float: right;
+    cursor:pointer;
+    padding: 10px 10px 10px 30px;
+    border-left: 1px solid #c0c0c0;
+    /* border-right: 1px solid lightblue; */
+    /* border-right: 1px solid #bbb; */
+}
+
+.tableFooter .tableLengthWrapper{
+    float: left;
+    margin-left: 4px;
+}
+
+.tableFooter .tableLength {
+    padding: 9px;
+    border: none;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    /* border: none; */
+}
+
+.tableData.delete img{
+    vertical-align:middle;
+}
+
+.tableOptions a:hover{
+    text-decoration: underline;
+}
+
+.tableOptions .tableAdd{
+    background: transparent url(../images/add-icon.png) 17% center no-repeat;
+}
+
+.tableOptions .tableAdd:hover{
+    background-image:url(../images/add-icon-hover.png);
+}
+
+.tableOptions .tableSave{
+    background: transparent url(../images/save-icon.png) 17% center no-repeat;
+}
+
+.tableOptions .tableSave:hover{
+    background-image:url(../images/save-icon-hover.png);
+}
+
+span.tableData{
+    white-space: pre-wrap;
+}
+
+.tableWrapper:after{
+    clear:both;
+}
+
+
+
+.tableHeader .sortOptions{
+    float:right;
+    vertical-align: middle;
+}
+
+.tableFooter{
+    text-align:center;
+    margin-top: -3px;
+    border-top: 1px solid #fafafa;
+}
+
+.tablePagination{
+    margin-right: 145px;
+}
+
+.tableFooter .tablePagination a,.tableFooter .tablePagination span, .tableFooter .tablePagination, .tableFooter .tablePagination li{
+    display:inline-block;
+}
+
+.tablePagination a,a:visited{
+    color:#333;
+}
+
+.tablePagination span{
+    color:#888;
+    cursor:default;
+}
+
+.tablePagination .tablePageActive:hover, .tablePagination a{
+    text-decoration:none;
+}
+
+.tablePages li.tablePageActive a{
+    text-decoration: underline;
+}
+
+.tablePagination a{
+    cursor:pointer;
+}
+
+.tablePagination a, .tablePagination span{
+    padding:10px;
+}
+
+.tablePagination a:hover{
+    text-decoration: underline;
+}
+
+.tablePagination{
+    padding:0;
+    margin-top:0;
+    margin-bottom:0;
+}
+
+.sortOptions a{
+    width:16px;
+    height:16px;
+    display:block;
+    cursor:pointer;
+}
+
+.sortAsc{
+    background:transparent url('../images/arrow-up.png') no-repeat;
+}
+
+.sortAsc:hover,.sortOptions .sortAsc.sortActive{
+    background-image:url('../images/arrow-up-hover.png');
+}
+
+.sortDesc{
+    background:transparent url('../images/arrow-down.png') no-repeat;
+}
+
+.sortDesc:hover,.sortOptions .sortDesc.sortActive{
+    background-image:url('../images/arrow-down-hover.png');
+}
+
+.sortOptions .sortDesc{
+    margin-top:4px;
+}
+
+
+.invisible{
+    display:none !important;
+}
+
+
+
+/*
+################################## Table Editor ##################################
+*/
+
+.tableDataActive, .tableDataActive:hover, .tableDataActiveInverted, .tableDataActiveInverted:hover{
+    border: 1px solid #aaa !important;
+    background:yellow !important;
+}
+
+.tableDataActive{
+    border-bottom-color: transparent !important;
+}
+
+.tableDataActiveInverted{
+    border-top-color: transparent !important;
+}
+
+.tableEditorWrapper{
+    z-index:200;
+    position: absolute;
+}
+
+.tableEditor{
+    position: relative;
+    /*min-height: 230px;*/
+    text-align:center;
+    min-width: 300px;
+    z-index: 100;
+    background: #eaeaea;
+    border: 1px solid #aaa;
+    box-shadow: 2px 2px 10px #ddd;
+}
+
+.tableEditorWrapper.tableEditorInverted .tableEditor {
+    box-shadow: none;
+}
+
+.tableEditor .tableEditorActions{
+    width: 100%;
+    text-align: center;
+}
+
+.tableEditor textarea, .tableEditor select{
+    display: block;
+    margin: 25px auto 10px auto;
+    width: 80%;
+    min-height: 130px;
+    resize:vertical;
+}
+
+input.tableEditField{
+    display: block;
+    text-align: center;
+    margin: 10px auto 0 auto;
+    padding: 7px;
+}
+
+.tableEditor select{
+    padding: 10px;
+    min-height: initial;
+}
+
+.tableEditor .xdsoft_datetimepicker{
+    margin:10px auto;
+}
+
+.tableEditorTextarea{
+    top:50%;
+    left:50%;
+
+}
+
+.tableEditorTextarea .tableEditor{
+    width: 610px;
+}
+
+/*.tableEditorActions .tableButton{*/
+    /*display: inline-block;*/
+    /*color: #666;*/
+    /*background-color: #eee;*/
+    /* text-transform: uppercase; */
+    /*letter-spacing: 2px;*/
+    /* font-size: 12px; */
+    /* margin: 5px 10px; */
+    /* float: left; */
+    /*width: 20%;*/
+    /*margin: 13px 10px;*/
+    /*padding: 8px 25px;*/
+    /*border-radius: 2px;*/
+    /*-moz-border-radius: 2px;*/
+    /*-webkit-border-radius: 2px;*/
+    /*border: 1px solid rgba(0,0,0,0.3);*/
+    /*border-bottom-width: 3px;*/
+/*}*/
+
+.tableEditorActions .tableButton, .button{
+    display: inline-block;
+    white-space: nowrap;
+    background-color: #ddd;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#ccc));
+    background-image: -webkit-linear-gradient(top, #eee, #ccc);
+    background-image: -moz-linear-gradient(top, #eee, #ccc);
+    background-image: -ms-linear-gradient(top, #eee, #ccc);
+    background-image: -o-linear-gradient(top, #eee, #ccc);
+    background-image: linear-gradient(top, #eee, #ccc);
+    border: 1px solid #777;
+    font: bold 1em/2em Arial, Helvetica;
+    text-decoration: none;
+    color: #333;
+    text-shadow: 0 1px 0 rgba(255,255,255,.8);
+    -moz-border-radius: .2em;
+    -webkit-border-radius: .2em;
+    border-radius: .2em;
+    -moz-box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset, 0 1px 0 rgba(0,0,0,.3);
+    -webkit-box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset, 0 1px 0 rgba(0,0,0,.3);
+    box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset, 0 1px 0 rgba(0,0,0,.3);
+
+}
+
+.button{
+    padding: .2em 1em;
+}
+
+.tableEditorActions .tableButton{
+    width:20%;
+    padding: .4em 2em;
+    margin: 1em;
+
+}
+
+
+.tableEditorActions .tableButton:hover, .button {
+    cursor:pointer;
+    background-color: #eee;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#fafafa), to(#ddd));
+    background-image: -webkit-linear-gradient(top, #fafafa, #ddd);
+    background-image: -moz-linear-gradient(top, #fafafa, #ddd);
+    background-image: -ms-linear-gradient(top, #fafafa, #ddd);
+    background-image: -o-linear-gradient(top, #fafafa, #ddd);
+    background-image: linear-gradient(top, #fafafa, #ddd);
+}
+
+.tableEditorActions .tableButton:active, .button:active {
+    -moz-box-shadow: 0 0 4px 2px rgba(0,0,0,.3) inset;
+    -webkit-box-shadow: 0 0 4px 2px rgba(0,0,0,.3) inset;
+    box-shadow: 0 0 4px 2px rgba(0,0,0,.3) inset;
+    position: relative;
+    top: 1px;
+}
+
+#shadow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: .5;
+    z-index: 100
+}
+
+
+
+/*
+################################## Loading Box ##################################
+*/
+
+.loadingBox{
+    width: 300px;
+    height: 15px;
+    border: 1px solid #333;
+    border-radius: 3px;
+}
+
+.loadingBar{
+    height: 100%;
+    width: 0;
+    background-image: url(../images/loading.png);
+}
